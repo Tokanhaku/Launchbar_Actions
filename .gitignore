@@ -1,0 +1,4 @@
+*.lbaction
+*.pyc
+.DS_Store
+!open_in_specific_language.lbaction
