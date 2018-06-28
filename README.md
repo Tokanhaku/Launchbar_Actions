@@ -6,6 +6,6 @@ This is a collection of my Launchbar actions.
 
 Add a todo list into Things. 
 
-requirments:
-	
-	- Things 3 
+#### requirments:
+
+- Things 3 
