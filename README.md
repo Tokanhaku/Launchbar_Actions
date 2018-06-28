@@ -30,8 +30,8 @@ Convert a video (usually screen recordings) to a gif. The width of the result gi
 #### Requirements:
 
 - [Anaconda](https://www.anaconda.com/download/#macos) (for Python3)
-- ffmpeg
-- gifsicle
+- [FFmpeg](https://www.ffmpeg.org)
+- [Gifsicle](https://www.lcdf.org/gifsicle/)
 
 Run following lines to install them via [Homebrew](https://brew.sh):
 
@@ -57,7 +57,7 @@ Translate text with Google Translate or other translation engines to 3 languages
 
 #### Requirement:
 
-- [translate-shell](https://www.soimort.org/translate-shell/)
+- [Translate Shell](https://www.soimort.org/translate-shell/)
 
 Run following lines to install it via [Homebrew](https://brew.sh):
 
