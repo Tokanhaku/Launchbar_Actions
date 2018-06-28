@@ -53,3 +53,8 @@ Record screen with QuickTime Player.
 
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+
+<i class="fas fa-stroopwafel"></i> <!-- this icon's 1) style prefix == fas and 2) icon name == stroopwafel -->
+<i class="fas fa-stroopwafel"></i> <!-- using an <i> element to reference the icon -->
+<span class="fas fa-stroopwafel"></span> <!-- using a <span> element to reference the icon -->
