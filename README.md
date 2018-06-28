@@ -58,7 +58,7 @@ Translate text with Google Translate or other translation engines to 3 languages
 
 - [translate-shell](https://www.soimort.org/translate-shell/)
 
-Run following lines to install them via [Homebrew](https://brew.sh)
+Run following lines to install it via [Homebrew](https://brew.sh)
 
 ```
 brew install translate-shell
