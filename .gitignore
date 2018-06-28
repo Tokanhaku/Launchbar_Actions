@@ -2,3 +2,4 @@
 *.pyc
 .DS_Store
 !open_in_specific_language.lbaction
+!add_list_to_things.lbaction
