@@ -29,6 +29,7 @@ Convert a video (usually screen recordings) to a gif. The width of the result gi
 
 #### Requirements:
 
+- [Anaconda](https://www.anaconda.com/download/#macos) (for Python3)
 - ffmpeg
 - gifsicle
 
@@ -50,7 +51,7 @@ Open an app in specific language. All the supported languages will be listed. Ch
 Record screen with QuickTime Player.
 
 
-## Google Translate
+## ★ Google Translate
 
 Translate text with Google Translate or other translation engines to 3 languages: English, German, Chinese. 
 
