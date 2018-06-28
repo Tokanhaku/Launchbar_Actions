@@ -50,6 +50,21 @@ Open an app in specific language. All the supported languages will be listed. Ch
 Record screen with QuickTime Player.
 
 
+## Google Translate
+
+Translate text with Google Translate or other translation engines to 3 languages: English, German, Chinese. 
+
+#### Requirement:
+
+- [translate-shell](https://www.soimort.org/translate-shell/)
+
+Run following lines to install them via [Homebrew](https://brew.sh)
+
+```
+brew install translate-shell
+```
+
+
 
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
