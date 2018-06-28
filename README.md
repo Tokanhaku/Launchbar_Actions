@@ -52,8 +52,4 @@ Record screen with QuickTime Player.
 
 
 
-<head>
-  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
-  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/v4-shims.js"></script>
-</head>
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
