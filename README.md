@@ -41,4 +41,4 @@ brew install gifsicle
 
 Open an app in specific language. All the supported languages will be listed. Choose one to launch the app.
 
-![](http://wx4.sinaimg.cn/large/e78c393egy1fsobfiomckg20qo0iab29.gif)
+![](Launchbar_Actions/README/e78c393egy1fsobfiomckg20qo0iab29.gif)
