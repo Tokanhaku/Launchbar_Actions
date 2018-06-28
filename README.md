@@ -41,4 +41,4 @@ brew install gifsicle
 
 Open an app in specific language. All the supported languages will be listed. Choose one to launch the app.
 
-![](Launchbar_Actions/README/e78c393egy1fsobfiomckg20qo0iab29.gif)
+![](https://raw.githubusercontent.com/Tokanhaku/Launchbar_Actions/master/README_img/open_in_specific_language.gif)
