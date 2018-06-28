@@ -42,3 +42,8 @@ brew install gifsicle
 Open an app in specific language. All the supported languages will be listed. Choose one to launch the app.
 
 ![](https://raw.githubusercontent.com/Tokanhaku/Launchbar_Actions/master/README_img/open_in_specific_language.gif)
+
+## Record Screen with QuickTime Player
+
+Record screen with QuickTime Player.
+
