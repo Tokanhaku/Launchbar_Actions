@@ -20,12 +20,13 @@ for arg in sys.argv[1:]:
 		todo = todo.strip()
 		todo_analyse = todo.split(' ')
 		for item in todo_analyse:
-			if item[0] == "#":
-				tags += "&tags="+item[1:]
-				todo = todo.replace(" "+item, "")
-			elif item[0] == "@":
-				lists += "&list="+item[1:]
-				todo = todo.replace(" "+item, "")
+			if item != "":
+				if item[0] == "#":
+					tags += "&tags="+item[1:]
+					todo = todo.replace(" "+item, "")
+				elif item[0] == "@":
+					lists += "&list="+item[1:]
+					todo = todo.replace(" "+item, "")
 		if todo != "":
 			added_todos = (added_todos+ "\n" + todo )
 			n += 1
