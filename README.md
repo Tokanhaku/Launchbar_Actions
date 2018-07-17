@@ -14,7 +14,7 @@ git clone https://github.com/Tokanhaku/Launchbar_Actions.git
 
 You will find a folder named **Launchbar_Actions** in current path. Double click on the acion icons to install them.
 
-## <i class="far fa-check-square"></i> ★ Add List to Things
+## ★ Add List to Things
 
 
 Add a todo list into Things. Each row will be added as one todo.
@@ -23,7 +23,7 @@ Add a todo list into Things. Each row will be added as one todo.
 
 - Things 3 
 
-## <i class="far fa-file-video"></i> ★ Convert Video to Gif
+## ★ Convert Video to Gif
 
 Convert a video (usually screen recordings) to a gif. The width of the result gif picture will be resized to 960px.
 
@@ -40,13 +40,13 @@ brew install ffmpeg
 brew install gifsicle
 ```
 
-## <i class="fas fa-globe-americas"></i> ★ Open in Specific Language
+## ★ Open in Specific Language
 
 Open an app in specific language. All the supported languages will be listed. Choose one to launch the app.
 
 ![](https://raw.githubusercontent.com/Tokanhaku/Launchbar_Actions/master/README_img/open_in_specific_language.gif)
 
-## <i class="fas fa-video"></i> ★ Record Screen with QuickTime Player
+## ★ Record Screen with QuickTime Player
 
 Record screen with QuickTime Player.
 
@@ -66,6 +66,6 @@ brew install translate-shell
 ```
 
 
+## ★ Copy IP Adress
 
-
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+Copy the current IP adress to clipboard.
