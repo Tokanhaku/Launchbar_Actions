@@ -69,3 +69,7 @@ brew install translate-shell
 ## ★ Copy IP Adress
 
 Copy the current IP adress to clipboard.
+
+## ★ Add to Daily Note
+
+Add the selected text to a markdown file on desktop.
