@@ -1,0 +1,43 @@
+@font-face {
+	font-style: normal;
+	font-family: "IBM Plex Serif";
+	font-weight: normal;
+	src: url(IBMPlexSerif-Text.otf);
+}
+@font-face {
+	font-style: italic;
+	font-family: "IBM Plex Serif";
+	font-weight: normal;
+	src: url(IBMPlexSerif-TextItalic.otf);
+}
+@font-face {
+	font-style: normal;
+	font-family: "IBM Plex Serif";
+	font-weight: bold;
+	src: url(IBMPlexSerif-Bold.otf);
+}
+@font-face {
+	font-style: italic;
+	font-family: "IBM Plex Serif";
+	font-weight: bold;
+	src: url(IBMPlexSerif-BoldItalic.otf);
+}
+@font-face {
+	font-style: normal;
+	font-family: "Source Han Serif";
+	font-weight: normal;
+	src: url(SourceHanSerifCN-SemiBold.otf);
+}
+@font-face {
+	font-style: normal;
+	font-family: "Source Han Serif";
+	font-weight: bold;
+	src: url(SourceHanSerifCN-Heavy.otf);
+}
+p {
+	font-family: "IBM Plex Serif", "Source Han Serif", serif;
+}
+h1, h2, h3, h4, h5, h6, div {
+	font-family: "IBM Plex Serif", "Source Han Serif", serif;
+	font-weight: bold;
+}

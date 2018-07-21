@@ -73,3 +73,23 @@ Copy the current IP adress to clipboard.
 ## ★ Add to Daily Note
 
 Add the selected text to a markdown file on desktop.
+
+## ★ Kindle Fonts Embedder
+
+Add an elegant publisher font (IBM Plex Serif, Source Han Serif) to an `azw3` Kindle book file.
+
+#### Requirement
+
+Requirements:
+
+- [Anaconda](https://www.anaconda.com/download/#macos) (for Python3)
+- [exiftool](https://www.sno.phy.queensu.ca/~phil/exiftool/index.html) (for loading file meta information)
+- [Calibre]
+
+Run following lines to install them via [Homebrew](https://brew.sh):
+
+```
+brew install exiftool
+brew cask install calibre
+```
+
