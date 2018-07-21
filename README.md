@@ -95,7 +95,7 @@ brew cask install calibre
 
 Draw the Kindle screenshot in a Kindle Paperwhite mockup.
 
-![](https://raw.githubusercontent.com/Tokanhaku/Launchbar_Actions/master/README_img/kindle_mockup.png | width=100)
+![](https://raw.githubusercontent.com/Tokanhaku/Launchbar_Actions/master/README_img/kindle_mockup.png){:height="50%" width="50%"}
 
 #### Requirements:
 
