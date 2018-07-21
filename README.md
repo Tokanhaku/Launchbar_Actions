@@ -80,11 +80,9 @@ Add an elegant publisher font (IBM Plex Serif, Source Han Serif) to an `azw3` Ki
 
 #### Requirement
 
-Requirements:
-
 - [Anaconda](https://www.anaconda.com/download/#macos) (for Python3)
 - [exiftool](https://www.sno.phy.queensu.ca/~phil/exiftool/index.html) (for loading file meta information)
-- [Calibre]
+- [Calibre](https://calibre-ebook.com/)
 
 Run following lines to install them via [Homebrew](https://brew.sh):
 
@@ -92,4 +90,15 @@ Run following lines to install them via [Homebrew](https://brew.sh):
 brew install exiftool
 brew cask install calibre
 ```
+
+## ★ Add Images in Kindle Mockup
+
+Draw the Kindle screenshot in a Kindle Paperwhite mockup.
+
+![](https://raw.githubusercontent.com/Tokanhaku/Launchbar_Actions/master/README_img/kindle_mockup.png)
+
+#### Requirements:
+
+- [Anaconda](https://www.anaconda.com/download/#macos) (for Python3)
+
 
