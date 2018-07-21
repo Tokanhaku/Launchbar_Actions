@@ -4,10 +4,10 @@
 
 on run argv
 	set filename to item 1 of argv
-	set news_title to "New Screenshot with Kindle Mockup!"
+	set news_title to "New Video with iPhone Mockup!"
 	
 	
 	tell application "LaunchBar"
-		display in notification center filename with title news_title callback URL "file://" & filename
+		display in notification center filename with title news_title
 	end tell
 end run

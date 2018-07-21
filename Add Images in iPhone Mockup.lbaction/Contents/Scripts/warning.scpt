@@ -4,7 +4,7 @@
 
 on run argv
 	set filename to item 1 of argv
-	set news_title to "New Screenshot with Kindle Mockup!"
+	set news_title to "This is not an iPad Pro Screenshot!"
 	
 	
 	tell application "LaunchBar"

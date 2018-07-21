@@ -81,7 +81,7 @@ Add an elegant publisher font (IBM Plex Serif, Source Han Serif) to an `azw3` Ki
 #### Requirement
 
 - [Anaconda](https://www.anaconda.com/download/#macos) (for Python3)
-- [exiftool](https://www.sno.phy.queensu.ca/~phil/exiftool/index.html) (for loading file meta information)
+- [ExifTool](https://www.sno.phy.queensu.ca/~phil/exiftool/index.html) (for loading file meta information)
 - [Calibre](https://calibre-ebook.com/)
 
 Run following lines to install them via [Homebrew](https://brew.sh):
@@ -102,3 +102,13 @@ Draw the Kindle screenshot in a Kindle Paperwhite mockup.
 - [Anaconda](https://www.anaconda.com/download/#macos) (for Python3)
 
 
+## ★ Add Images in iPhone/iPad Pro Mockup
+#### Requirements:
+
+- [Anaconda](https://www.anaconda.com/download/#macos) (for Python3)
+
+## ★ Add Videos in iPhone 8/X Mockup
+####  Requirements:
+
+- [Anaconda](https://www.anaconda.com/download/#macos) (for Python3)
+- [FFmpeg](https://www.ffmpeg.org)
