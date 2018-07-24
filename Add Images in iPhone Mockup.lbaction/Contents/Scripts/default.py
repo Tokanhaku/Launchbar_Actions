@@ -1,4 +1,4 @@
-#!/usr/local/bin/python3
+#!/usr/local/anaconda3/bin/python3
 #
 # LaunchBar Action Script
 #
