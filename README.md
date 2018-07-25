@@ -120,3 +120,15 @@ Draw the Kindle screenshot in a Kindle Paperwhite mockup.
 ####  Requirements:
 
 - [Anaconda](https://www.anaconda.com/download/#macos) (for Python3)
+
+
+## ★ Add Shadow to Screenshot
+
+Add a Mac-like drop shadow to screenshot.
+
+![](https://raw.githubusercontent.com/Tokanhaku/Launchbar_Actions/master/README_img/KDE-Window_with_shadow.png)
+![](https://raw.githubusercontent.com/Tokanhaku/Launchbar_Actions/master/README_img/Win10-Window_with_shadow.png)
+
+####  Requirements:
+
+- [Anaconda](https://www.anaconda.com/download/#macos) (for Python3)
