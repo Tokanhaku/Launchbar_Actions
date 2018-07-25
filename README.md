@@ -76,7 +76,7 @@ Add the selected text to a markdown file on desktop.
 
 ## ★ Kindle Fonts Embedder
 
-Add an elegant publisher font (IBM Plex Serif, Source Han Serif) to an `azw3` Kindle book file.
+Add an elegant publisher font (IBM Plex Serif, Source Han Serif) to an `azw3` Kindle book file. Inspired by [this article](https://sspai.com/post/43931) on [sspai.com](https://sspai.com).
 
 #### Requirement
 
@@ -112,3 +112,11 @@ Draw the Kindle screenshot in a Kindle Paperwhite mockup.
 
 - [Anaconda](https://www.anaconda.com/download/#macos) (for Python3)
 - [FFmpeg](https://www.ffmpeg.org)
+
+## ★ Add Images in Windows Mockup
+
+![](https://raw.githubusercontent.com/Tokanhaku/Launchbar_Actions/master/README_img/Windows_with_shadow.png)
+
+####  Requirements:
+
+- [Anaconda](https://www.anaconda.com/download/#macos) (for Python3)
