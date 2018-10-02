@@ -19,7 +19,7 @@ languages = ["zh", "en", "de"]
 for arg in sys.argv[1:]:
 	#counter = arg.count("\n")
 	for language in languages:
-		my_command = ["trans", "-brief","-e", "google", ":"+language, arg]
+		my_command = ["trans", "-brief","-e", "bing", ":"+language, arg]
 		content = sp.check_output(my_command, env=my_env)
 		content = content.decode("utf-8")
 		item = {}
