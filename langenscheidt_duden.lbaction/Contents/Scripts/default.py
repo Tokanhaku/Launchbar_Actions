@@ -72,14 +72,14 @@ for arg in sys.argv[1:]:
         langenscheidt(arg,items)
     except:
         pass
-    
-    # try:
-        # duden(arg, items)
-    # except:
-        # try:
-            # duden(arg.capitalize(),items)
-        # except:
-            # pass
+
+    try:
+        duden(arg, items)
+    except:
+        try:
+            duden(arg.capitalize(),items)
+        except:
+            pass
     
     if len(items) == 0:
         item = {}
