@@ -1,4 +1,4 @@
-#!/usr/local/anaconda3/bin/python
+#!/usr/local/anaconda3/bin/python3
 #
 # LaunchBar Action Script
 #
@@ -6,6 +6,7 @@ import sys
 import json
 
 from urllib.request import urlopen
+from urllib.parse import quote
 import re
 
 items = []
@@ -13,12 +14,14 @@ items = []
 # Note: The first argument is the script's path
 for arg in sys.argv[1:]:
     html = urlopen(
-        "https://de.langenscheidt.com/deutsch-chinesisch/"+arg
+        "https://de.langenscheidt.com/deutsch-chinesisch/"+ quote(arg)
         ).read().decode('utf-8')
-    html = re.findall(r'Beispielsätze für(.+?)Synonyme für',html)
+    
+
     if len(html)!=0:
-        html = html[0]
+        #html = html[0]
         res = re.findall(r'<div class="text-to-speech" data-text="(.+?)" data-hash', html, flags=re.DOTALL)
+        bedeutung = re.findall(r'<span class="ind">(.+?)</span>', html, flags=re.DOTALL)
         dict = {}
         for i in range(0,len(res),2):
             dict[res[i]] = res[i+1]
