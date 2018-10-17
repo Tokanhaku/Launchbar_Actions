@@ -12,14 +12,16 @@ import re
 def duden(arg, items):
     from bs4 import BeautifulSoup
     html = urlopen(
-        "https://www.duden.de/rechtschreibung/"+ arg#.lower()
+        "https://www.duden.de/rechtschreibung/"+ arg.lower().replace("ß","sz")
         ).read().decode('utf-8')
     if len(html)!=0:
         html = re.findall(r'<h2>Bedeutungen, Beispiele und Wendungen</h2>(.+?)<h2>Blättern</h2>', html, flags=re.DOTALL)
         html = html[0]
         html = re.findall(r'<li id="Bedeut(.+?)</li>', html, flags=re.DOTALL)
         for x in html:
-            index = re.findall(r'ung([1-9][0-9]{0,1}[a-z])', x, flags=re.DOTALL)
+            index = re.findall(r'ung([1-9][0-9]{0,1}[a-z]?)', x, flags=re.DOTALL)
+            if len(index) == 0:
+                index = " "
             dfn = re.findall(r'"> (.+?)<section class="term-section">', x, flags=re.DOTALL)
             if len(dfn) != 0:
                 item_dfn = {}
@@ -39,7 +41,7 @@ def duden(arg, items):
 
 def langenscheidt(arg,items):
     html = urlopen(
-        "https://de.langenscheidt.com/deutsch-chinesisch/"+ quote(arg.lower())
+        "https://de.langenscheidt.com/deutsch-chinesisch/"+ quote(arg)
         ).read().decode('utf-8')
 
     bedeutung = re.findall(r'<span class="ind">(.+?)</span>', html, flags=re.DOTALL)
@@ -73,7 +75,7 @@ for arg in sys.argv[1:]:
     except:
         pass
 
-
+# 
     try:
         duden(arg, items)
     except:

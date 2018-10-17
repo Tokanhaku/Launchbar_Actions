@@ -8,84 +8,112 @@ import json
 from urllib.request import urlopen
 from urllib.parse import quote
 import re
-
-def duden(arg, items):
-    from bs4 import BeautifulSoup
-    html = urlopen(
-        "https://www.duden.de/rechtschreibung/"+ arg.lower()
-        ).read().decode('utf-8')
-    if len(html)!=0:
-        html = re.findall(r'<h2>Bedeutungen, Beispiele und Wendungen</h2>(.+?)<h2>Blättern</h2>', html, flags=re.DOTALL)
-        html = html[0]
-        html = re.findall(r'<li id="Bedeut(.+?)</li>', html, flags=re.DOTALL)
-        for x in html:
-            index = re.findall(r'ung(.+?)"> ', x, flags=re.DOTALL)
-            dfn = re.findall(r'"> (.+?)<section class="term-section">', x, flags=re.DOTALL)
-            if len(dfn) != 0:
-                item_dfn = {}
-                item_dfn["title"] = BeautifulSoup(dfn[0],features="lxml").text.replace(";","\n")
-                item_dfn["icon"] = "Duden@2x.png"
-                item_dfn["subtitle"] = "Duden | Definition " + index[0]
-                items.append(item_dfn)
-                
-            bsps = re.findall(r'<h3>Beispiele</h3><ul><li><span><span>(.+?)</span></span>', x, flags=re.DOTALL)
-            if len(bsps) != 0:
-                for bsp in bsps:
-                    item_bsp = {}
-                    item_bsp["title"] = BeautifulSoup(bsp, features="lxml").text
-                    item_bsp["icon"] = "Duden@2x.png"
-                    item_bsp["subtitle"] = "Duden | Beispiel " + index[0]
-                    items.append(item_bsp)
+from bs4 import BeautifulSoup
 
 def langenscheidt(arg,items):
-    html = urlopen(
-        "https://de.langenscheidt.com/deutsch-chinesisch/"+ quote(arg.lower())
-        ).read().decode('utf-8')
+    arg = quote(arg)
+    arg = arg.replace("%C3%B6","oe")
+    arg = arg.replace("%C3%A4","ae")
+    arg = arg.replace("%C3%BC","ue")
+    arg = arg.replace("%C3%9F","ss")
+    url = "https://de.langenscheidt.com/deutsch-chinesisch/"+ arg
+    # print(url)
+    html = urlopen(url).read().decode('utf-8')
+    # print("https://de.langenscheidt.com/deutsch-chinesisch/"+ quote(arg.replace("ö","oe").replace("ä","ae").replace("ü","ue").replace("ß","ss")))
+    html = BeautifulSoup(html,features="lxml")
+    try:
+        for bedeutung in html.find_all(attrs={"class":"lemma-entry translation"}):
+            left  = bedeutung.find(attrs={"class":"col1"})
+            left  = left.find(attrs={"class":"trans"})
+            left  = left.span.string
 
-    bedeutung = re.findall(r'<span class="ind">(.+?)</span>', html, flags=re.DOTALL)
-    bedeut = []
-    for i in range(len(bedeutung)):
-        if i%2 == 0:
-            bedeut = bedeut+[bedeutung[i]]
-    #print(bedeut)
-    #html = re.findall(r'<span class="ind-pieces"><span class="ind">(.+?)</span></span>', html, flags=re.DOTALL)
-    #for html
-
-    if len(html)!=0:
-        #html = html[0]
-        res = re.findall(r'<div class="text-to-speech" data-text="(.+?)" data-hash', html, flags=re.DOTALL)
-        bedeutung = re.findall(r'<span class="ind">(.+?)</span>', html, flags=re.DOTALL)
-        dict = {}
-        for i in range(0,len(res),2):
-            dict[res[i]] = res[i+1]
+            right = bedeutung.find(attrs={"class":"col2"})
+            right1 = right.find(attrs={"class":"lemma-pieces"})
+            right1 = right1.string
+            try: 
+                right2 = right.find(attrs={"class":"ind-pieces"})
+                right2 = right2.string
+                right = right1 + " (" + right2 + ")"
+            except:
+                right = right1
             item = {}
-            item["title"] = res[i] + "\n" + res[i+1]
-            item["subtitle"] = "Langenscheidt"
+            item["title"] = right
+            item["subtitle"] = "释义："+left
+            item["icon"] = "langenscheidt.jpg"
+            items.append(item)
+    except:
+        pass
+
+    try:
+        for bsp in html.find_all(attrs={"class":"lemma-example"}):
+            left  = bsp.find(attrs={"class":"col1"})
+            left  = left.find(attrs={"class":"trans"})
+            left  = left.span.string
+            right = bsp.find_all(attrs={"class":"col2"})[0]
+            right = right.span.strings
+            y = ""
+            for x in right:
+                y += x
+            right = y
+
+            item = {}
+            item["title"] = right
+            item["subtitle"] = "示例："+left
             item["icon"] = "langenscheidt.jpg"
             items.append(item)
 
+    except:
+        pass
+
+    try:
+        more_example = html.find(attrs={"class":"more example"})
+        for bsp in more_example.find_all(attrs={"class":"additional-entry"}):
+            left  = bsp.find(attrs={"class":"col1"})
+            left  = left.find(attrs={"class":"trans"})
+            left  = left.span.string
+
+            right = bsp.find_all(attrs={"class":"col2"})[0]
+            right = right.span.strings
+            y = ""
+            for x in right:
+                y += x
+            right = y
+
+            item = {}
+            item["title"] = right
+            item["subtitle"] = "示例："+left
+            item["icon"] = "langenscheidt.jpg"
+            items.append(item)
+    except:
+        pass
+    # url = html.find(attrs={"rel":"alternate","hreflang":"de"})
+    # url = "https:"+re.findall(r'<link href="(.+?)"', str(url), flags=re.DOTALL)[0]
+    # return url
+
+
 
 items = []
+# langenscheidt("ä ü ß",items)
+
 # Note: The first argument is the script's path
 for arg in sys.argv[1:]:
     try:
         langenscheidt(arg,items)
     except:
         pass
-    
-    # try:
-        # duden(arg, items)
-    # except:
-        # try:
-            # duden(arg.capitalize(),items)
-        # except:
-            # pass
-    
-    if len(items) == 0:
-        item = {}
-        item["title"] = "Nix gefunden."
-        item["icon"] = "frown-Template.png"
-        items.append(item)
+if len(items) == 0:
+    item = {}
+    item["title"] = "Nix gefunden."
+    item["icon"] = "frown-Template.png"
+    items.append(item)
+# else:
+#     item = {}
+#     item["title"] = url
+#     # <link rel="alternate" hreflang="de" href="//de.langenscheidt.com/deutsch-chinesisch/aufnehmen" />
+
+#     item["subtitle"] = "打开网页"
+#     item["icon"] = "langenscheidt.jpg"
+#     items.append(item)
 print(json.dumps(items))
 
 
