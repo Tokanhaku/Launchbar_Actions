@@ -8,7 +8,6 @@ import os
 from urllib.request import urlopen
 from urllib.parse import quote
 import re
-from bs4 import BeautifulSoup
 
 
 def search_youtube(arg):

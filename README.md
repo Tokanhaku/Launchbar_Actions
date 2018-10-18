@@ -14,6 +14,23 @@ git clone https://github.com/Tokanhaku/Launchbar_Actions.git
 
 You will find a folder named **Launchbar_Actions** in current path. Double click on the acion icons to install them.
 
+## ★ Youtube
+
+Search Youtube and list the five videos on the top, choose one to open it with IINA.
+
+![](https://raw.githubusercontent.com/Tokanhaku/Launchbar_Actions/master/README_img/youtube.gif)
+
+#### Requirements:
+
+- [IINA](https://lhc70000.github.io/iina/)
+    + Download it with `brew cask install iina`
+
+#### Recommended:
+- [Anaconda](https://www.anaconda.com/download/#macos) (for Python3)
+    + Download it with `brew cask install anaconda`
+    + If you don't use Anaconda Python, you may need to install a few packages and change the first line (shebang) from `#!/usr/local/anaconda3/bin/python3` to the path of your Python. 
+
+
 ## ★ Add List to Things
 
 
