@@ -23,7 +23,7 @@ Search Youtube and list the five videos on the top, choose one to open it with I
 #### Requirements:
 
 - [YouTube Data API](https://developers.google.com/youtube/v3/getting-started)
-    + create a file named `api` (without extension), paste your API in it, and save it in `Scripts\`.
+    + create a file named `api` (without extension) in `Scripts\`, paste your API in it.
 - [IINA](https://lhc70000.github.io/iina/)
     + Download it with `brew cask install iina`
 
