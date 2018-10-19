@@ -7,11 +7,6 @@ tell application "System Events"
 	end tell
 end tell
 
--- set LaunchBar_theme to do shell script "defaults read at.obdev.LaunchBar Theme"
--- if (LaunchBar_theme = "at.obdev.LaunchBar.theme.Default") then
--- do shell script "defaults write at.obdev.LaunchBar Theme at.obdev.LaunchBar.theme.Dark"
--- end if
-
 if it_is_dark = true then
 	do shell script "defaults write at.obdev.LaunchBar Theme at.obdev.LaunchBar.theme.Dark"
 else
