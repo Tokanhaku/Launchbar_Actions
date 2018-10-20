@@ -26,7 +26,7 @@ def search_youtube(arg):
     url = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q=" \
            + quote(arg)+"&key="+api \
            + "&type=video" \
-           + "&fields=items(id(videoId),snippet(title,publishedAt,thumbnails(default(url))))"
+           + "&fields=items(id(videoId),snippet(title,publishedAt,thumbnails(default(url)),channelTitle))"
     content = json.loads(urlopen(url).read().decode('utf-8'))
     result = []
     for vid in content['items']:
@@ -37,6 +37,7 @@ def search_youtube(arg):
         item["day"]   = vid['snippet']['publishedAt'][:10]
         item["pic"]   = vid['snippet']['thumbnails']['default']['url']
         item["picname"] = "../Resources/"+vid['id']['videoId']+'.jpg'
+        item["channelTitle"] = vid["snippet"]["channelTitle"]
         f = urlopen(item["pic"])
         with open(item["picname"], "wb") as code:
             code.write(f.read())
@@ -59,14 +60,16 @@ if __name__ == '__main__':
             for vid in vids:
                 item = {}
                 item["title"] = vid["title"]
-                item["subtitle"] = vid["day"] + " | " + vid["contentDetails"]["duration"][2:].lower() \
-                                  + " | " + vid["contentDetails"]["definition"].upper() + " | " \
-                                  + "👁" + simple_number(vid["statistics"]["viewCount"])
+                item["subtitle"] = vid["day"]\
+                                  + " | " + vid["contentDetails"]["duration"][2:].lower() \
+                                  + " | " + vid["contentDetails"]["definition"].upper() \
+                                  + " | " + "👁" + simple_number(vid["statistics"]["viewCount"])
                 try:
                     item["subtitle"] += " 👍🏻" + simple_number(vid["statistics"]["likeCount"]) \
                                        + " 👎🏻" + simple_number(vid["statistics"]["dislikeCount"])
                 except:
                     pass
+                item["subtitle"] += " | " + vid["channelTitle"]    
                 item["icon"] = vid["picname"][13:]
                 item['action'] = "open.py"
                 item['actionArgument'] = {"vid_url": "iina://weblink?url="+vid["url"]}
