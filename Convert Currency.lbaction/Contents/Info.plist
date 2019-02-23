@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleIconFile</key>
+	<string>currency-exchange_Template.png</string>
+	<key>CFBundleIdentifier</key>
+	<string>io.henrik.launchbar.ConvertCurrency</string>
+	<key>CFBundleName</key>
+	<string>Convert Currency</string>
+	<key>CFBundleVersion</key>
+	<string>2.2.5</string>
+	<key>LBArgument</key>
+	<string>A string in this format: 84.55 USD to JPY (commas are fine)</string>
+	<key>LBDescription</key>
+	<dict>
+		<key>LBArgument</key>
+		<string>A string in this format: 84.55 USD to JPY (commas are fine)</string>
+		<key>LBAuthor</key>
+		<string>Henrik Lissner</string>
+		<key>LBEmail</key>
+		<string>contact@henrik.io</string>
+		<key>LBRequirements</key>
+		<string>An API key from currencylayer.com (free)</string>
+		<key>LBResult</key>
+		<string>The converting currency and amount</string>
+		<key>LBSummary</key>
+		<string>Converts currency using currencylayer.com</string>
+		<key>LBTwitter</key>
+		<string>@vnought</string>
+		<key>LBWebsiteURL</key>
+		<string>http://v0.io/launchbar</string>
+	</dict>
+	<key>LBRequirements</key>
+	<string>An API key from currencylayer.com (free)</string>
+	<key>LBResult</key>
+	<string>The converting currency and amount</string>
+	<key>LBScripts</key>
+	<dict>
+		<key>LBDefaultScript</key>
+		<dict>
+			<key>LBAcceptedArgumentTypes</key>
+			<array>
+				<string>string</string>
+			</array>
+			<key>LBKeepWindowActive</key>
+			<true/>
+			<key>LBRequiresArgument</key>
+			<true/>
+			<key>LBResultType</key>
+			<string>unknown</string>
+			<key>LBReturnsResult</key>
+			<true/>
+			<key>LBScriptName</key>
+			<string>default.js</string>
+		</dict>
+		<key>LBSuggestionsScript</key>
+		<dict>
+			<key>LBAcceptedArgumentTypes</key>
+			<array>
+				<string>string</string>
+			</array>
+			<key>LBBackgroundKillEnabled</key>
+			<true/>
+			<key>LBKeepWindowActive</key>
+			<true/>
+			<key>LBLiveFeedbackEnabled</key>
+			<true/>
+			<key>LBRequiresArgument</key>
+			<true/>
+			<key>LBResultType</key>
+			<string>unknown</string>
+			<key>LBReturnsResult</key>
+			<true/>
+			<key>LBScriptName</key>
+			<string>suggestions.js</string>
+		</dict>
+	</dict>
+	<key>LBTextInputTitle</key>
+	<string>Convert</string>
+</dict>
+</plist>
