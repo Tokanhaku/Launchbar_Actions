@@ -19,7 +19,7 @@
 		<key>LBAuthor</key>
 		<string>Henrik Lissner, Huanbo Tu</string>
 		<key>LBEmail</key>
-		<string>contact@henrik.io</string>
+		<string>contact@henrik.io, huanbo.tu@outlook.de</string>
 		<key>LBRequirements</key>
 		<string>An API key from currencylayer.com (free)</string>
 		<key>LBResult</key>
@@ -27,7 +27,7 @@
 		<key>LBSummary</key>
 		<string>Converts currency using currencylayer.com</string>
 		<key>LBTwitter</key>
-		<string>@vnought</string>
+		<string>@vnought, @tokanhaku</string>
 		<key>LBWebsiteURL</key>
 		<string>http://v0.io/launchbar</string>
 	</dict>

@@ -2,11 +2,7 @@
 
 Converts all the money you wish you had. Uses [currencylayer.com](https://currencylayer.com/).
 
-![](img/01.png)
-
-It autocompletes your currencies too!
-
-![](img/02.gif)
+![](img/exchange.gif)
 
 ## Installation
 
@@ -14,7 +10,8 @@ You need an API key from [currencylayer.com](https://currencylayer.com/) (it's f
 
 1. On first run, you will get this prompt:
 
-   ![](img/03.png)
+    ![](img/03.png)
+
 2. Click **Preferences** and open `Preferences.plist`
 3. Set `api_key` to your currencylayer api key. By default, it should be set to
    `---API KEY HERE---`.
