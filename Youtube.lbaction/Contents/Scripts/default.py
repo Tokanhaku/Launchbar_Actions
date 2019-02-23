@@ -80,4 +80,9 @@ if __name__ == '__main__':
             item["title"] = "Error!"
             item["icon"] = "font-awesome:fa-exclamation-triangle"
             items.append(item)
+    if len(items) == 0:
+        item = {}
+        item["title"] = "Found nothing!"
+        item["icon"] = "font-awesome:fa-exclamation-triangle"
+        items.append(item)
     print(json.dumps(items))

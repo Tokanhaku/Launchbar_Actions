@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleIconFile</key>
-	<string>yin-yang-Template.png</string>
+	<string>yin-yang-solid-Template.png</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.tokanhaku.LaunchBar.action.SwitchDarkMode</string>
 	<key>CFBundleName</key>
