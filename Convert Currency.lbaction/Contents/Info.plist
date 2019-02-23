@@ -5,11 +5,11 @@
 	<key>CFBundleIconFile</key>
 	<string>currency-exchange_Template.png</string>
 	<key>CFBundleIdentifier</key>
-	<string>io.henrik.launchbar.ConvertCurrency</string>
+	<string>com.tokanhaku.LaunchBar.action.ConvertCurrency</string>
 	<key>CFBundleName</key>
 	<string>Convert Currency</string>
 	<key>CFBundleVersion</key>
-	<string>2.2.5</string>
+	<string>2.3</string>
 	<key>LBArgument</key>
 	<string>A string in this format: 84.55 USD to JPY (commas are fine)</string>
 	<key>LBDescription</key>
@@ -17,7 +17,7 @@
 		<key>LBArgument</key>
 		<string>A string in this format: 84.55 USD to JPY (commas are fine)</string>
 		<key>LBAuthor</key>
-		<string>Henrik Lissner</string>
+		<string>Henrik Lissner, Huanbo Tu</string>
 		<key>LBEmail</key>
 		<string>contact@henrik.io</string>
 		<key>LBRequirements</key>
