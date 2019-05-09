@@ -3,6 +3,7 @@
 .DS_Store
 palette.png
 README.html
+*.zip
 !README_img
 !README.md
 !open_in_specific_language.lbaction
@@ -26,4 +27,5 @@ README.html
 !langenscheidt_duden.lbaction
 !Youtube.lbaction
 !Convert Currency.lbaction
+!Shorten URL with t.cn.lbaction
 api
