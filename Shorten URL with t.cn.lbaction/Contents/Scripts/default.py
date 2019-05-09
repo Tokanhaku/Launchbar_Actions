@@ -13,9 +13,7 @@ tcn_url = "http://api.weibo.com/2/short_url/shorten.json?source=2849184197&url_l
 arg = sys.argv[1:][0]
 if arg[:8] != "https://" and arg[:7] != "http://":
     arg = "https://"+arg
-    print(arg[:8])
 tcn_url += arg
-print(tcn_url)
 req = urllib2.Request(tcn_url)
 response = urllib2.urlopen(req)
 the_page = response.read().replace("\n","").replace("true","True")
