@@ -16,7 +16,7 @@ if arg[:8] != "https://" and arg[:7] != "http://":
 tcn_url += arg
 req = urllib2.Request(tcn_url)
 response = urllib2.urlopen(req)
-the_page = response.read().replace("\n","").replace("true","True")
+the_page = response.read().replace("\n","").replace("true","True").replace("false","False")
 the_page = eval(the_page)
 short_url = the_page["urls"][0]["url_short"].replace("http://","")
 
