@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleIconFile</key>
+	<string>outline-g_translate-24px-Template.png</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.tokanhaku.LaunchBar.action.GoogleTranslateToGerman</string>
+	<key>CFBundleName</key>
+	<string>Google Translate to German</string>
+	<key>CFBundleVersion</key>
+	<string>0.1</string>
+	<key>LBDescription</key>
+	<dict>
+		<key>LBAuthor</key>
+		<string>Huanbo Tu</string>
+		<key>LBEmail</key>
+		<string>huanbo.tu@outlook.de</string>
+		<key>LBTwitter</key>
+		<string>@tokanhaku</string>
+		<key>LBWebsiteURL</key>
+		<string></string>
+	</dict>
+	<key>LBScripts</key>
+	<dict>
+		<key>LBDefaultScript</key>
+		<dict>
+			<key>LBAcceptedArgumentTypes</key>
+			<array>
+				<string>string</string>
+			</array>
+			<key>LBKeepWindowActive</key>
+			<true/>
+			<key>LBRequiresArgument</key>
+			<true/>
+			<key>LBResultType</key>
+			<string>unknown</string>
+			<key>LBReturnsResult</key>
+			<true/>
+			<key>LBScriptName</key>
+			<string>default.py</string>
+		</dict>
+	</dict>
+</dict>
+</plist>
