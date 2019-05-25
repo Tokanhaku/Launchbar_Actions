@@ -31,3 +31,5 @@ README.html
 !Convert Number into Chinese Upper Case.lbaction
 !Google Translate to *.lbaction
 api
+!search_files_by_name.lbaction
+!search_files_by_contents.lbaction
