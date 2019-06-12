@@ -5,5 +5,5 @@
 
 echo "$# arguments passed"
 for ARG in "$@"; do
-    ./shadow "$ARG"
+    ./dropshadow "$ARG"
 done

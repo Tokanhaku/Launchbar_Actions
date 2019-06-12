@@ -66,7 +66,7 @@ def makeShadow(image_file, border, offset, shadowColour,blur_r):
 def main():
     import sys
     border = 112
-    offset = [0, -48]
+    offset = [0, -36]
     greyvalue = 124
     sdColor = (greyvalue,greyvalue,greyvalue)
     GaussianBlurRadius = 38

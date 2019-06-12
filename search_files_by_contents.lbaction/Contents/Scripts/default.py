@@ -18,7 +18,7 @@ for arg in sys.argv[1:]:
     files = str(files).split("\n")
     if files[0] == "":
         item = {}
-        item['title'] = "Found nothing!"
+        item['title'] = "No result!"
         item['icon']  = "grin-beam-sweat-Template"
         items.append(item)
     else:
