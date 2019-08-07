@@ -6,11 +6,13 @@ import sys, urllib2
 import subprocess as sp
 import os
 import json
+import urllib
 
 tcn_url = "http://api.weibo.com/2/short_url/shorten.json?source=2849184197&url_long="
 
 # Note: The first argument is the script's path
 arg = sys.argv[1:][0]
+# arg = urllib.quote(arg)
 if arg[:8] != "https://" and arg[:7] != "http://":
     arg = "https://"+arg
 tcn_url += arg
