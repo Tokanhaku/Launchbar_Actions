@@ -47,5 +47,8 @@ for arg in sys.argv[1:]:
 	my_command=["open", added_todos]
 	sp.check_output(my_command, env=my_env)
 
-	my_command = ["osascript", "notifications.scpt", str(n), todo]
+	if(title != ""):
+		my_command = ["osascript", "notifications.scpt", str(n), title]
+	else: 
+		my_command = ["osascript", "notifications.scpt", str(n), todo]
 	sp.check_output(my_command, env=my_env)
