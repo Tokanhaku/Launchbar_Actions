@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/local/bin/python3
 #
 # LaunchBar Action Script
 #
@@ -14,7 +14,7 @@ items = []
 for arg in sys.argv[1:]:
     my_command = ["mdfind", "-name", arg]
     files = sp.check_output(my_command, env=my_env)
-    files = str(files).split("\n")
+    files = files.decode("utf-8").split("\n")
     if files[0] == "":
         item = {}
         item['title'] = "No result!"
@@ -26,4 +26,4 @@ for arg in sys.argv[1:]:
             item['path'] = file
             items.append(item)
 
-print json.dumps(items)
+print(json.dumps(items))
